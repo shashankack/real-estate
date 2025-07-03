@@ -41,9 +41,9 @@ const Footer = () => {
       <Stack
         spacing={2}
         width="100%"
-        direction="row"
+        direction={isMobile ? "column" : "row"}
         justifyContent="space-between"
-        alignItems="center"
+        alignItems={isMobile ? "start" : "center"}
       >
         <Typography
           color={theme.palette.grey[400]}

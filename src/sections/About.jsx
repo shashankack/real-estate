@@ -11,16 +11,21 @@ const About = () => {
       gap={2}
       justifyContent="space-between"
       alignItems="start"
-      direction="row"
+      direction={isMobile ? "column" : "row"}
     >
-      <Typography fontSize="2vw" fontWeight={500} flex={1} whiteSpace="nowrap">
+      <Typography
+        fontSize={isMobile ? "5vw" : "2vw"}
+        fontWeight={500}
+        flex={1}
+        whiteSpace="nowrap"
+      >
         About RSJP Developers
       </Typography>
       <Stack justifyContent="space-between" alignItems="start" spacing={2}>
         <Typography
-          fontSize="1vw"
+          fontSize={isMobile ? "3vw" : "1vw"}
           fontWeight={500}
-          width={1000}
+          width={isMobile ? "100%" : 1000}
           textAlign="justify"
         >
           RSJP Developers is a Bangalore-based, award-winning real estate
@@ -31,8 +36,9 @@ const About = () => {
           matters, assistance in opening local bank accounts, and guidance for
           company registration within India.
         </Typography>
-        <EnquiryButton text={"Learn more"} redirect="/#" />
+        {!isMobile && <EnquiryButton text={"Learn more"} redirect="/#" />}
       </Stack>
+      {isMobile && <EnquiryButton text={"Learn more"} redirect="/#" />}
     </Stack>
   );
 };
