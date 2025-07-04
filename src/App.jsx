@@ -4,17 +4,20 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-
-import Home from "./pages/Home";
 import { createTheme, ThemeProvider } from "@mui/material";
 
-import { projectsData } from "./assets/data";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Agents from "./pages/Agents";
 
-import Projects from "./sections/Projects";
+import { projectsData, videosData } from "./assets/data";
+
+import Projects from "./sections/ProjectsSection";
 
 import Navbar from "./components/Navbar";
 import ProjectInternal from "./pages/ProjectInternal";
 import Footer from "./components/Footer";
+import NotFound from "./pages/NotFound";
 
 const Layout = () => {
   return (
@@ -23,7 +26,9 @@ const Layout = () => {
       <Route path="/projects" element={<Projects data={projectsData} />} />
       <Route path="/projects/:project-name" element={<ProjectInternal />} />
       <Route path="/about" element={<div>About</div>} />
-      <Route path="/contact" element={<div>Contact</div>} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/agents" element={<Agents />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
@@ -51,13 +56,17 @@ const App = () => {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <Navbar />
-        <Layout />
-        <Footer />
-      </Router>
-    </ThemeProvider>
+    <>
+      <video src={videosData.intro} style={{ display: "none" }} />
+
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Navbar />
+          <Layout />
+          <Footer />
+        </Router>
+      </ThemeProvider>
+    </>
   );
 };
 

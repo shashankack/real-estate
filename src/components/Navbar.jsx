@@ -18,6 +18,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useEffect, useRef, useState } from "react";
 
 import TextAnimation from "./TextAnimation";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,8 +27,9 @@ const Navbar = () => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const location = useLocation();
 
-  const scrollThreshold = 700;
+  const scrollThreshold = location.pathname === "/" ? 700 : 100;
   const lastScrollYRef = useRef(0);
 
   const navLinks = [
@@ -76,9 +78,20 @@ const Navbar = () => {
           }}
         >
           {/* Logo */}
-          <Box sx={{ textDecoration: "none", color: "#000" }}>
+          <Box
+            sx={{
+              textDecoration: "none",
+              color: "#000",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
+            }}
+            onClick={() => (window.location.href = "/")}
+          >
             <Typography variant="h5" sx={{ fontWeight: 600 }}>
-              Real Estate
+              RSJP Developers
             </Typography>
           </Box>
 

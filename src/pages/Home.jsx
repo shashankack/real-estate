@@ -1,15 +1,15 @@
 import { projectsData } from "../assets/data";
 import Intro from "../components/Intro";
-import About from "../sections/About";
-import Hero from "../sections/Hero";
-import Projects from "../sections/Projects";
+import AboutSection from "../sections/AboutSection";
+import Hero from "../sections/HeroSection";
+import ProjectsSection from "../sections/ProjectsSection";
 
 const Home = () => {
   return (
     <>
       <Intro NextComponent={Hero} />
-      <Projects data={projectsData} />
-      <About />
+      <ProjectsSection data={projectsData} />
+      <AboutSection />
     </>
   );
 };

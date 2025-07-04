@@ -93,3 +93,41 @@ export const projectsData = [
     ],
   },
 ];
+
+export const faqData = [
+  {
+    question: "How long does it take to get a response?",
+    answer: "We typically respond within 24 to 48 hours on working days.",
+  },
+  {
+    question: "Can I schedule an in-person consultation?",
+    answer:
+      "Yes! Use the form above to request a meeting and we’ll coordinate a time with you.",
+  },
+  {
+    question: "Where is your office located?",
+    answer:
+      "We're based in Bangalore, India. You can find our exact location on the map below.",
+  },
+  {
+    question: "What are your office hours?",
+    answer: "Our office is open Monday to Friday, 9 AM to 6 PM IST.",
+  },
+  {
+    question: "Do you offer virtual consultations?",
+    answer:
+      "Absolutely! We can arrange video calls or phone consultations at your convenience.",
+  },
+  {
+    question: "How can I subscribe to your newsletter?",
+    answer:
+      "You can subscribe using the form in the footer of our website. Just enter your email address and click 'Subscribe'.",
+  },
+];
+
+export const videosData = {
+  intro:
+    "https://res.cloudinary.com/dhlowafw0/video/upload/f_auto/q_auto/v1751628416/Rsjp_Main_Video_V2_Low_size_jfzw6p.mp4",
+  project3:
+    "https://res.cloudinary.com/dhlowafw0/video/upload/f_auto/q_auto/v1751628206/project_3_ezwbhp.mp4",
+};
