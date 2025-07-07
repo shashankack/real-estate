@@ -5,11 +5,10 @@ import {
   Stack,
   useTheme,
   useMediaQuery,
-  IconButton,
   Grid,
-  Divider,
-  Button,
 } from "@mui/material";
+
+import ProjectGallery from "../components/ProjectGallery";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { projectsData } from "../assets/data";
 import GetConsultationButton from "../components/EnquiryButton";
@@ -113,13 +112,16 @@ const ProjectInternal = () => {
       {/* Image Banner */}
       <Box height={isMobile ? 300 : 700} mb={4} ref={imageContainerRef}>
         <Box
-          component="img"
-          src={project.image}
+          component="video"
+          src={project.video}
+          autoPlay
+          loop
+          muted
+          playsInline
           sx={{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            borderRadius: 3,
           }}
         />
       </Box>
@@ -237,6 +239,14 @@ const ProjectInternal = () => {
             </Grid>
           )}
         </Grid>
+        {project.gallery && project.gallery.length > 0 && (
+          <Box my={8}>
+            <Typography variant="h5" fontWeight={600} mb={2}>
+              Project Gallery
+            </Typography>
+            <ProjectGallery images={project.gallery} />
+          </Box>
+        )}
       </Grid>
     </Box>
   );

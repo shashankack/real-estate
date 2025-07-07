@@ -1,95 +1,160 @@
-import project1 from "../assets/images/project1.jpg";
-import project2 from "../assets/images/project2.jpg";
-import project3 from "../assets/images/project3.jpg";
-import project4 from "../assets/images/project4.jpg";
-import project5 from "../assets/images/project5.jpg";
+// Villa
+import villa1 from "../assets/images/projects/villa/image_1.jpg";
+import villa2 from "../assets/images/projects/villa/image_2.jpg";
+import villa3 from "../assets/images/projects/villa/image_3.jpg";
+import villa4 from "../assets/images/projects/villa/image_4.jpg";
+import villa5 from "../assets/images/projects/villa/image_5.jpg";
+import villa6 from "../assets/images/projects/villa/image_6.jpg";
+import villa7 from "../assets/images/projects/villa/image_7.jpg";
+import villa8 from "../assets/images/projects/villa/image_8.jpg";
+import villa9 from "../assets/images/projects/villa/image_9.jpg";
+import villa10 from "../assets/images/projects/villa/image_10.jpg";
+import villa11 from "../assets/images/projects/villa/image_11.jpg";
+
+// Phase 1
+import phase1_1 from "../assets/images/projects/avyaarthEnclave/phase1/image_1.jpg";
+import phase1_2 from "../assets/images/projects/avyaarthEnclave/phase1/image_2.jpg";
+import phase1_3 from "../assets/images/projects/avyaarthEnclave/phase1/image_3.jpg";
+import phase1_4 from "../assets/images/projects/avyaarthEnclave/phase1/image_4.jpg";
+import phase1_5 from "../assets/images/projects/avyaarthEnclave/phase1/image_5.jpg";
+import phase1_6 from "../assets/images/projects/avyaarthEnclave/phase1/image_6.jpg";
+import phase1_7 from "../assets/images/projects/avyaarthEnclave/phase1/image_7.jpg";
+import phase1Thumbnail from "../assets/images/projects/avyaarthEnclave/phase1/thumbnail.jpg";
+
+// Phase 2
+import phase2Thumbnail from "../assets/images/projects/avyaarthEnclave/phase2/thumbnail.jpg";
+import phase2_1 from "../assets/images/projects/avyaarthEnclave/phase2/image_1.jpg";
+import phase2_2 from "../assets/images/projects/avyaarthEnclave/phase2/image_2.jpg";
+import phase2_3 from "../assets/images/projects/avyaarthEnclave/phase2/image_3.jpg";
+import phase2_4 from "../assets/images/projects/avyaarthEnclave/phase2/image_4.jpg";
+import phase2_5 from "../assets/images/projects/avyaarthEnclave/phase2/image_5.jpg";
+import phase2_6 from "../assets/images/projects/avyaarthEnclave/phase2/image_6.jpg";
+
+// Warehouse
+import warehouseThumbnail from "../assets/images/projects/warehouse/thumbnail.png";
+import warehouse1 from "../assets/images/projects/warehouse/image_1.jpg";
+import warehouse2 from "../assets/images/projects/warehouse/image_2.jpg";
+import warehouse3 from "../assets/images/projects/warehouse/image_3.jpg";
+import warehouse4 from "../assets/images/projects/warehouse/image_4.jpg";
+import warehouse5 from "../assets/images/projects/warehouse/image_5.jpg";
+import warehouse6 from "../assets/images/projects/warehouse/image_6.jpg";
+
+export const videosData = {
+  intro:
+    "https://res.cloudinary.com/dhlowafw0/video/upload/f_auto/q_auto/v1751870349/intro_video_ckbwtf.mp4",
+  avyaarthEnclave:
+    "https://res.cloudinary.com/dhlowafw0/video/upload/f_auto/q_auto/v1751870022/phase_1_rm8yig.mp4",
+  northWoordVillas:
+    "https://res.cloudinary.com/dhlowafw0/video/upload/f_auto/q_auto/v1751870040/phase_2_qc0mcs.mp4",
+  industrialProject:
+    "https://res.cloudinary.com/dhlowafw0/video/upload/f_auto/q_auto/v1751870179/warehouse_gycn4t.mp4",
+};
 
 export const projectsData = [
   {
     id: 1,
-    title: "Trussadi Recidences",
-    location: "Bangalore, India",
-    image: project1,
-    tags: ["Luxury", "Residential", "Modern", "For Families"],
+    title: "Avyaarth Enclave Phase 1",
+    thumbnail: phase1Thumbnail,
+    gallery: [
+      phase1_1,
+      phase1_2,
+      phase1_3,
+      phase1_4,
+      phase1_5,
+      phase1_6,
+      phase1_7,
+    ],
+    video: videosData.avyaarthEnclave,
     description:
-      "Trussardi Residences – a premium branded project by Mira Developments and Trussardi Casa in Al Furjan. Fully furnished studios and apartments are available for purchase. Residents will enjoy a variety of amenities, including a state-of-the-art gym with Technogym equipment, an infinity pool, a 200-meter jogging track on the roof, as well as A-La-Carte services: 24/7 concierge service, personal butler, valet parking and much more.",
+      "Avyaarth Enclave Phase 1 is a residential project located in Malur, Karnataka. This project was developed under a 50:50 Joint Development Agreement (JDA) and spans 12 acres and 37 guntas. It features a contemporary design and was completed between 2016 and 2018.",
+    location: "Malur, Karnataka",
+    tags: ["Residential", "Completed", "Contemporary"],
     statistics: [
-      { value: "AED 3.5M", label: "Starting Price" },
-      { value: "1800 sqft", label: "Starting Area" },
-      { value: "March 2025", label: "Handover Date" },
-      { value: 20, label: "Floors" },
-      { value: "2-4", label: "Bedrooms" },
-      { value: "40/60", label: "Payment Plan" },
+      { value: "12 Acres, 37 Guntas", label: "Land Area" },
+      { value: "2016 – 2018", label: "Development Period" },
+      { value: "50:50", label: "JDA Ratio" },
+      { value: "2018", label: "Completion Year" },
     ],
   },
+
   {
     id: 2,
-    title: "Palm Jebel Ali Frond C",
+    title: "Avyaarth Enclave Phase 2",
     description:
-      "Palm Jebel Ali Frond C is a luxurious residential project located in Dubai, UAE. It offers stunning views of the Arabian Gulf and is designed for modern living. The project features spacious villas with contemporary architecture, private gardens, and access to world-class amenities. Residents can enjoy a serene lifestyle with proximity to the beach, parks, and recreational facilities.",
-    location: "Dubai, UAE",
-    image: project2,
-    tags: ["Luxury", "Residential", "Modern", "For Families"],
+      "Avyaarth Enclave Phase 2 is a premium residential layout located in Malur, Karnataka, developed under a Joint Development Agreement. Spanning 4 acres and 30 guntas (4.30 Gunte), the project was completed in 2024 with a strong emphasis on underground cable infrastructure and landscape-first planning. It reflects a modern approach to utility design and community living.",
+    location: "Malur, Karnataka",
+    thumbnail: phase2Thumbnail,
+    gallery: [phase2_1, phase2_2, phase2_3, phase2_4, phase2_5, phase2_6],
+    video:
+      "https://res.cloudinary.com/dhlowafw0/video/upload/f_auto/q_auto/v1751870040/phase_2_qc0mcs.mp4",
+    tags: [
+      "Residential",
+      "Premium",
+      "Completed",
+      "Modern Utilities",
+      "Landscape-first",
+    ],
     statistics: [
-      { value: "AED 3.5M", label: "Starting Price" },
-      { value: "1800 sqft", label: "Starting Area" },
-      { value: "March 2025", label: "Handover Date" },
-      { value: 20, label: "Floors" },
-      { value: "2-4", label: "Bedrooms" },
-      { value: "40/60", label: "Payment Plan" },
+      { value: "4 Acres, 30 Guntas", label: "Land Area" },
+      { value: "2016 – 2018", label: "Development Period" },
+      { value: "2024", label: "Completion Year" },
+      { value: "JDA", label: "Development Type" },
     ],
   },
+
   {
     id: 3,
-    title: "Bay Grove Recidences",
+    title: "Industrial Project – Malur",
     description:
-      "Bay Grove Residences is a premium residential project located in the heart of Bangalore, India. It offers a blend of modern architecture and lush greenery, providing residents with a serene living environment. The project features spacious apartments with high-end finishes, landscaped gardens, and state-of-the-art amenities. Residents can enjoy a luxurious lifestyle with easy access to shopping, dining, and entertainment options.",
-    location: "Mumbai, India",
-    image: project3,
-    tags: ["Luxury", "Residential", "Modern", "For Families"],
+      "Located in Malur, Karnataka, this industrial project was executed under a 49:51 Joint Development Agreement from 2019 to 2022. Spread across 5 acres, it delivered 85 sq ft of total built-up warehouse space across two units. Despite pandemic-related challenges, the project was seamlessly completed with strong logistic infrastructure and operational efficiency.",
+    location: "Malur, Karnataka",
+    thumbnail: warehouseThumbnail,
+    gallery: [
+      warehouse1,
+      warehouse2,
+      warehouse3,
+      warehouse4,
+      warehouse5,
+      warehouse6,
+    ],
+    video: videosData.industrialProject,
+    tags: ["Industrial", "Warehouse", "Logistics", "JDA 49:51"],
     statistics: [
-      { value: "AED 3.5M", label: "Starting Price" },
-      { value: "1800 sqft", label: "Starting Area" },
-      { value: "March 2025", label: "Handover Date" },
-      { value: 20, label: "Floors" },
-      { value: "2-4", label: "Bedrooms" },
-      { value: "40/60", label: "Payment Plan" },
+      { value: "5 Acres", label: "Land Area" },
+      { value: "85 sq ft", label: "Warehouse Space" },
+      { value: "2019 – 2022", label: "Development Period" },
+      { value: "49:51", label: "JDA Ratio" },
+      { value: "2022", label: "Completion Year" },
     ],
   },
+
   {
     id: 4,
-    title: "Mira Villas Designed by Bentley Home",
+    title: "Northwood Villas – Hegganahalli",
+    video: videosData.northWoordVillas,
+    thumbnail:
+      "https://res.cloudinary.com/dhlowafw0/image/upload/f_auto/q_auto/v1751877774/thumbnail_zxc8kt.jpg",
     description:
-      "Mira Villas Designed by Bentley Home is an exclusive residential project located in Dubai, UAE. It features luxurious villas designed in collaboration with Bentley Home, offering a unique blend of elegance and modernity. Each villa is meticulously crafted with high-end finishes and bespoke interiors, providing residents with a truly opulent living experience. The project includes private gardens, swimming pools, and access to world-class amenities, making it ideal for families seeking a sophisticated lifestyle.",
-    location: "Dubai, UAE",
-    startPrice: "AED 3.5M",
-    image: project4,
-    tags: ["Luxury", "Residential", "Modern", "For Families"],
-    statistics: [
-      { value: "AED 3.5M", label: "Starting Price" },
-      { value: "1800 sqft", label: "Starting Area" },
-      { value: "March 2025", label: "Handover Date" },
-      { value: 20, label: "Floors" },
-      { value: "2-4", label: "Bedrooms" },
-      { value: "40/60", label: "Payment Plan" },
+      "Northwood Villas is an ongoing residential project located in Hegganahalli, Devanahalli, Karnataka. With a robust structural foundation already in place, the project embraces an aesthetically refined architectural approach. It is steadily progressing toward its 2025 completion, with major construction milestones scheduled in the coming months.",
+    location: "Hegganahalli, Devanahalli, Karnataka",
+    gallery: [
+      villa1,
+      villa2,
+      villa3,
+      villa4,
+      villa5,
+      villa6,
+      villa7,
+      villa8,
+      villa9,
+      villa10,
+      villa11,
     ],
-  },
-  {
-    id: 5,
-    title: "W Recidences - JLT",
-    description:
-      "W Residences - JLT is a prestigious residential project located in the vibrant Jumeirah Lake Towers (JLT) area of Dubai, UAE. It offers a unique blend of luxury and modern living with stunning views of the lakes and skyline. The project features spacious apartments with contemporary designs, high-end finishes, and access to exclusive amenities such as a private pool, fitness center, and landscaped gardens. Residents can enjoy a dynamic lifestyle with proximity to dining, shopping, and entertainment options.",
-    location: "Dubai, UAE",
-    startPrice: "AED 3.5M",
-    image: project5,
-    tags: ["Luxury", "Residential", "Modern", "For Families"],
+    tags: ["Residential", "Ongoing", "Under Construction", "Architectural"],
     statistics: [
-      { value: "AED 3.5M", label: "Starting Price" },
-      { value: "1800 sqft", label: "Starting Area" },
-      { value: "March 2025", label: "Handover Date" },
-      { value: 20, label: "Floors" },
-      { value: "2-4", label: "Bedrooms" },
-      { value: "40/60", label: "Payment Plan" },
+      { value: "Under Construction", label: "Current Stage" },
+      { value: "2025", label: "Estimated Completion" },
+      { value: "JDA", label: "Development Type" },
     ],
   },
 ];
@@ -124,10 +189,3 @@ export const faqData = [
       "You can subscribe using the form in the footer of our website. Just enter your email address and click 'Subscribe'.",
   },
 ];
-
-export const videosData = {
-  intro:
-    "https://res.cloudinary.com/dhlowafw0/video/upload/f_auto/q_auto/v1751628416/Rsjp_Main_Video_V2_Low_size_jfzw6p.mp4",
-  project3:
-    "https://res.cloudinary.com/dhlowafw0/video/upload/f_auto/q_auto/v1751628206/project_3_ezwbhp.mp4",
-};

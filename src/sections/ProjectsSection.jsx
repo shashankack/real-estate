@@ -14,7 +14,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectsSection = ({ data }) => {
+const Projects = ({ data }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const location = useLocation();
@@ -74,12 +74,12 @@ const ProjectsSection = ({ data }) => {
       mt={location.pathname === "/" ? 0 : 10}
     >
       <Typography
-        variant="h2"
+        variant={isMobile ? "h4" : "h2"}
         textAlign="start"
         fontWeight={500}
         color={theme.palette.custom.black}
       >
-        ProjectsSection
+        Projects
       </Typography>
       <Divider
         sx={{
@@ -117,7 +117,7 @@ const ProjectsSection = ({ data }) => {
               >
                 <Box
                   component="img"
-                  src={project.image}
+                  src={project.thumbnail}
                   alt={`Project ${index}`}
                   onClick={() =>
                     (window.location.href = `/projects/${slugify(
@@ -153,7 +153,9 @@ const ProjectsSection = ({ data }) => {
                   }}
                 >
                   <Typography fontSize="1.4em" color="white" textAlign="center">
-                    {project.statistics[2].value}
+                    {project.statistics.find(
+                      (stat) => stat.label === "Land Area"
+                    )?.value || "N/A"}
                   </Typography>
                 </Box>
               </Box>
@@ -186,4 +188,4 @@ const ProjectsSection = ({ data }) => {
   );
 };
 
-export default ProjectsSection;
+export default Projects;
