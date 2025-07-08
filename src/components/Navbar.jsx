@@ -17,6 +17,8 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import { useEffect, useRef, useState } from "react";
 
+import greenTextLogo from "../assets/images/logos/singleline.png";
+
 import TextAnimation from "./TextAnimation";
 import { useLocation } from "react-router-dom";
 
@@ -80,6 +82,7 @@ const Navbar = () => {
           {/* Logo */}
           <Box
             sx={{
+              width: 300,
               textDecoration: "none",
               color: "#000",
               cursor: "pointer",
@@ -90,9 +93,15 @@ const Navbar = () => {
             }}
             onClick={() => (window.location.href = "/")}
           >
-            <Typography variant="h5" sx={{ fontWeight: 600 }}>
-              RSJP Developers
-            </Typography>
+            <Box
+              component="img"
+              src={greenTextLogo}
+              sx={{
+                width: "100%",
+                height: "auto",
+                objectFit: "contain",
+              }}
+            />
           </Box>
 
           {/* Desktop Nav */}

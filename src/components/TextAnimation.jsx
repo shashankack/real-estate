@@ -17,8 +17,8 @@ const TextAnimation = ({
   text,
   linkHref = null,
   fontSize = "1rem",
-  color = "#000",
-  animatedColor = "#c36247",
+  color = "#231F20",
+  animatedColor = "#66785E",
 }) => {
   const wrapperRef = useRef(null);
   const charsRef = useRef({ text1: [], text2: [] });

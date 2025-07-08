@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 
@@ -6,6 +6,9 @@ import greenMonogram from "../assets/images/logos/green_logo_monogram.png";
 import greenLogoText from "../assets/images/logos/green_logo_text.png";
 
 const Intro = ({ NextComponent }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   const [hasPlayed, setHasPlayed] = useState(() => {
     return sessionStorage.getItem("introVideoPlayed") === "true";
   });
@@ -37,7 +40,6 @@ const Intro = ({ NextComponent }) => {
         mainContainerRef.current.style.zIndex = "-1";
         sessionStorage.setItem("introVideoPlayed", "true");
 
-        // ✅ Re-enable scroll when animation completes
         document.body.style.overflow = "";
       },
     });
@@ -50,14 +52,19 @@ const Intro = ({ NextComponent }) => {
       ease: "back.out(.8)",
     });
     tl.to(monogramRef.current, {
-      x: "-6vw",
+      x: isMobile ? -80 : -130,
       duration: 0.5,
       ease: "power2.inOut",
     });
+
     tl.fromTo(
       logoTextRef.current,
-      { x: 0 },
-      { x: "50%", duration: 0.8, ease: "power2.out" },
+      { xPercent: -50 },
+      {
+        xPercent: isMobile ? 50 : 0,
+        duration: .8,
+        ease: "power2.out",
+      },
       "<"
     );
     tl.to(
@@ -67,7 +74,7 @@ const Intro = ({ NextComponent }) => {
         duration: 0.6,
         ease: "power1.out",
       },
-      "+=0.4"
+      "+=0.8"
     );
     tl.to(
       [leftContainerRef.current, rightContainerRef.current],
@@ -142,7 +149,11 @@ const Intro = ({ NextComponent }) => {
             left={0}
             zIndex={25}
           >
-            <Box position="relative" width="10vw" height="10vw">
+            <Box
+              position="relative"
+              width={isMobile ? 190 : 250}
+              height={isMobile ? 190 : 250}
+            >
               <Box
                 component="img"
                 src={greenMonogram}
@@ -155,7 +166,7 @@ const Intro = ({ NextComponent }) => {
                   left: 0,
                   zIndex: 2,
                   bgcolor: "#fff",
-                  padding: "1vw",
+                  padding: 4,
                 }}
               />
               <Box
@@ -163,7 +174,7 @@ const Intro = ({ NextComponent }) => {
                 src={greenLogoText}
                 ref={logoTextRef}
                 sx={{
-                  width: "8vw",
+                  width: isMobile ? 100 : 180,
                   height: "auto",
                   position: "absolute",
                   top: "50%",

@@ -80,18 +80,20 @@ const Footer = () => {
               sx={{ width: isMobile ? "100%" : 300 }}
             />
             <Button
-              type="submit"
-              variant="contained"
+              variant="outlined"
               sx={{
+                marginBottom: 2,
+                color: "#66785E",
+                border: 2,
+                borderColor: "#66785E",
+                fontSize: isMobile ? "4vw" : "1vw",
                 textTransform: "none",
-                borderRadius: 8,
-                backgroundColor: theme.palette.custom.orange,
-                color: theme.palette.custom.white,
-                px: 4,
-                py: 1.2,
-                fontWeight: 600,
+                width: 200,
+                borderRadius: 6,
                 "&:hover": {
-                  backgroundColor: "#c36247",
+                  backgroundColor: "#66785E",
+                  color: theme.palette.custom.white,
+                  borderColor: "#66785E",
                 },
               }}
             >

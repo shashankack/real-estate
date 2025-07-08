@@ -1,3 +1,16 @@
+/**
+ * EnquiryButton Component
+ * This component renders a button that opens a dialog for user enquiries.
+ * It includes a form for name and phone number input,
+ * and options to contact via Telegram or WhatsApp.
+ * It also supports redirection to a specified URL.
+ * @component
+ * @param {Object} props - Component properties
+ * @param {string} [props.text="Get Consultation"] - Button text
+ * @param {string} [props.redirect] - URL to redirect when button is clicked
+ * @param {string} [props.themeColor="#66785E"] - Button theme color
+ * @returns {JSX.Element} Rendered EnquiryButton component
+ */
 import {
   Button,
   Dialog,
@@ -17,7 +30,7 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import dialogImage from "../assets/images/formBg.jpg";
 
 const EnquiryButton = forwardRef(
-  ({ text = "Get Consultation", redirect }, ref) => {
+  ({ text = "Get Consultation", redirect, themeColor = "#66785E" }, ref) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -50,16 +63,17 @@ const EnquiryButton = forwardRef(
           }}
           sx={{
             marginBottom: 2,
-            color: theme.palette.custom.orange,
-            borderColor: theme.palette.custom.orange,
+            color: themeColor,
+            border: 2,
+            borderColor: themeColor,
             fontSize: isMobile ? "4vw" : "1vw",
             textTransform: "none",
             width: isMobile ? "100%" : 300,
             borderRadius: 6,
             "&:hover": {
-              backgroundColor: "#c36247",
+              backgroundColor: themeColor,
               color: theme.palette.custom.white,
-              borderColor: "#c36247",
+              borderColor: themeColor,
             },
           }}
         >
