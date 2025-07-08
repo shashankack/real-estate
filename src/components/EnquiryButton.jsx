@@ -197,7 +197,7 @@ const EnquiryButton = forwardRef(
                   right: 12,
                   backgroundColor: "rgba(255, 255, 255, 0.8)",
                   "&:hover": {
-                    color: theme.palette.custom.orange,
+                    color: theme.palette.custom.green,
                     backgroundColor: "rgba(255, 255, 255, 0.7)",
                   },
                 }}

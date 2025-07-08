@@ -47,9 +47,10 @@ const App = () => {
         primary: "#000000",
       },
       custom: {
-        black: "#000",
+        black: "#231F20",
         white: "#fff",
         orange: "#c36247",
+        green: "#66785E",
         grey: "#f5f5f5",
       },
     },

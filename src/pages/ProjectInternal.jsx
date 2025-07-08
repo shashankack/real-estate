@@ -133,7 +133,12 @@ const ProjectInternal = () => {
         alignItems="center"
         mb={4}
       >
-        <Typography variant="h3" fontWeight={600} ref={addToTitleRefs}>
+        <Typography
+          variant="h3"
+          fontWeight={600}
+          ref={addToTitleRefs}
+          color={theme.palette.custom.black}
+        >
           {project.title}
         </Typography>
         {!isMobile && <GetConsultationButton ref={addToTitleRefs} />}
@@ -188,7 +193,10 @@ const ProjectInternal = () => {
             <Grid
               ref={addToStatsRefs}
               key={index}
-              size={4}
+              size={{
+                xs: 6,
+                md: 4,
+              }}
               justifyContent="center"
               alignItems="center"
               display="flex"
@@ -197,7 +205,7 @@ const ProjectInternal = () => {
               <Typography
                 fontWeight={600}
                 fontSize={isMobile ? "4vw" : "1.4vw"}
-                color={theme.palette.custom.orange}
+                color={theme.palette.custom.green}
               >
                 {stat.value}
               </Typography>
@@ -220,7 +228,7 @@ const ProjectInternal = () => {
             md: 6,
           }}
           spacing={4}
-          alignItems="center"
+          alignItems="start"
         >
           <Grid>
             <Typography
@@ -234,7 +242,7 @@ const ProjectInternal = () => {
             </Typography>
           </Grid>
           {isMobile && (
-            <Grid size={12} md={4} display="flex" justifyContent="center">
+            <Grid size={12} display="flex" justifyContent="center">
               <GetConsultationButton />
             </Grid>
           )}
