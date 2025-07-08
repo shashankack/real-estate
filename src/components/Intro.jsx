@@ -59,10 +59,10 @@ const Intro = ({ NextComponent }) => {
 
     tl.fromTo(
       logoTextRef.current,
-      { xPercent: -50 },
+      { x: isMobile ? -20 : -10 },
       {
-        xPercent: isMobile ? 50 : 0,
-        duration: .8,
+        x: isMobile ? 70 : 100,
+        duration: 0.8,
         ease: "power2.out",
       },
       "<"
