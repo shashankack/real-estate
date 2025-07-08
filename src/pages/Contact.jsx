@@ -23,6 +23,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { faqData } from "../assets/data";
 import { useEffect, useRef } from "react";
 
+import contactImg from "../assets/images/contact.jpg";
+
 gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
   const theme = useTheme();
@@ -101,11 +103,12 @@ const Contact = () => {
         ref={imageContainerRef}
         sx={{ width: "100%", overflow: "hidden" }}
         height={isMobile ? 400 : 600}
+        position="relative"
       >
         <Box
           ref={imageRef}
           component="img"
-          src="https://placehold.co/1200x400"
+          src={contactImg}
           alt="Contact Hero"
           sx={{
             width: "100%",
@@ -113,6 +116,10 @@ const Contact = () => {
             objectFit: "cover",
           }}
         />
+
+        <Box position="absolute" bottom={0} left={40}>
+          <Typography color="#fff" fontSize="4vw">Contact Us</Typography>
+        </Box>
       </Box>
 
       {/* Contact Form */}

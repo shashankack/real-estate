@@ -60,7 +60,7 @@ const ProjectInternal = () => {
         y: "-100%",
         opacity: 0,
         duration: 1,
-        ease: "power3.out",
+        ease: "power1.out",
       });
 
       tl.from(
@@ -70,12 +70,12 @@ const ProjectInternal = () => {
           opacity: 0,
           stagger: 0.2,
           duration: 0.8,
-          ease: "power3.out",
+          ease: "power1.out",
         },
         "<=0.6"
       );
 
-      // Step 4: Animate statsRefs in stagger
+      // Step 2: Animate statsRefs in stagger
       tl.from(
         statsRefs.current,
         {

@@ -51,7 +51,7 @@ const ProjectGallery = ({ images }) => {
         {images.map((img, idx) => (
           <Grid
             size={{
-              xs: 12,
+              xs: 6,
               sm: 4,
             }}
             key={idx}
@@ -68,7 +68,7 @@ const ProjectGallery = ({ images }) => {
                 cursor: "pointer",
                 transition: "0.3s",
                 "&:hover": {
-                  transform: "scale(1.03)",
+                  transform: "scale(1.02)",
                 },
               }}
               onClick={() => handleOpen(idx)}
